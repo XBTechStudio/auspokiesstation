@@ -1,0 +1,143 @@
+/* Enhanced Holographic Card Base Styles */
+.holographicCard {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  cursor: pointer;
+}
+
+.holographicCard::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg,
+    rgba(0, 255, 204, 0.1),
+    rgba(99, 102, 241, 0.15),
+    rgba(168, 85, 247, 0.1),
+    rgba(0, 255, 204, 0.1)
+  );
+  border-radius: inherit;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.holographicCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+    rgba(0, 255, 204, 0.05) 0%,
+    rgba(99, 102, 241, 0.03) 25%,
+    rgba(168, 85, 247, 0.02) 50%,
+    rgba(0, 255, 204, 0.05) 75%,
+    rgba(99, 102, 241, 0.03) 100%
+  );
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+  filter: blur(12px); /* Reduced from 20px for better performance */
+}
+
+.holographicCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(0, 255, 204, 0.1),
+    0 10px 20px rgba(99, 102, 241, 0.1),
+    0 5px 10px rgba(168, 85, 247, 0.1);
+}
+
+.holographicCard:hover::before {
+  opacity: 1;
+  animation: borderGlow 2s infinite linear;
+}
+
+.holographicCard:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes borderGlow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 400% 0%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.3;
+    filter: blur(12px) brightness(1); /* Reduced blur */
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(15px) brightness(1.15); /* Reduced blur */
+  }
+}
+
+/* Enhanced card background with glassmorphism 2.0 */
+.holographicCard {
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.025) 0%,
+      rgba(255, 255, 255, 0.015) 25%,
+      rgba(255, 255, 255, 0.005) 50%,
+      rgba(255, 255, 255, 0.015) 75%,
+      rgba(255, 255, 255, 0.025) 100%
+    ),
+    linear-gradient(45deg,
+      rgba(0, 255, 204, 0.015) 0%,
+      rgba(99, 102, 241, 0.008) 25%,
+      rgba(168, 85, 247, 0.012) 50%,
+      rgba(99, 102, 241, 0.008) 75%,
+      rgba(0, 255, 204, 0.015) 100%
+    ),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  backdrop-filter: blur(15px) saturate(150%) contrast(1.05); /* Reduced blur and effects */
+  -webkit-backdrop-filter: blur(15px) saturate(150%) contrast(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.holographicOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(0, 255, 204, 0.1) 0%,
+    transparent 50%
+  );
+}
+
+.holographicCard:hover .holographicOverlay {
+  opacity: 1;
+}
+
+/* Enhanced Performance Optimizations */
+.holographicCard {
+  will-change: transform, box-shadow;
+  contain: layout style paint;
+}
+
+/* Focus States for Accessibility */
+.holographicCard:focus {
+  outline: 2px solid rgba(0, 255, 204, 0.5);
+  outline-offset: 4px;
+  transform: translateY(-4px);
+}

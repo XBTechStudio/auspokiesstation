@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0e27;
+  --foreground: #ffffff;
+  
+  /* Theme Variables */
+  --bg: #0a0e27;
+  --panel: #1a1f3a;
+  --line: #2a2f4a;
+  --text: #ffffff;
+  --muted: #a0a5b8;
+  --muted2: #6b7280;
+  --btn: #ffd700;
+  --btnText: #0a0e27;
+  --btn2: #4fc3f7;
+  --btn2Text: #ffffff;
+  --radius: 16px;
+  --max: 1200px;
+  --bg-dark: #050505;
+  --bg-card: #111329;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a5b8;
+  --border-primary: rgba(168, 85, 247, 0.25);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --neon-purple: #A855F7;
+  --neon-pink: #EC4899;
+  --text-gradient-neon: linear-gradient(135deg, #A855F7 0%, #EC4899 50%, #22D3EE 100%);
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Admin Panel Variables */
+  --purple-primary: #6B46C1;
+  --purple-light: #A78BFA;
+  --gold: #F59E0B;
+  --gold-bright: #FFD700;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,276 @@
+.dashboard {
+  padding: 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  color: #e5e7eb;
+}
+
+.welcomeSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, rgba(9, 14, 28, 0.82), rgba(13, 20, 38, 0.78));
+  border-radius: 14px;
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.welcomeContent {
+  flex: 1;
+}
+
+.greetingSection {
+  margin-bottom: 1rem;
+}
+
+.greeting {
+  font-size: 0.95rem;
+  color: #a5b4fc;
+  font-weight: 500;
+}
+
+.welcomeTitle {
+  font-size: 1.6rem;
+  font-weight: 650;
+  color: #f8fafc;
+  margin-top: 0.5rem;
+  letter-spacing: 0.2px;
+  text-shadow: 0 0 16px rgba(168, 85, 247, 0.22);
+}
+
+.clockWidget {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(168, 85, 247, 0.22));
+  border: 1px solid rgba(103, 232, 249, 0.52);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  min-width: 210px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 18px rgba(103, 232, 249, 0.12);
+}
+
+.clockContainer {
+  text-align: center;
+}
+
+.clockTime {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ecfeff;
+  margin-bottom: 0.2rem;
+}
+
+.clockDate {
+  font-size: 0.8rem;
+  color: #c4b5fd;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.statCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6B46C1, #EC4899, #00FFCC);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+.statCard:hover::before {
+  opacity: 1;
+}
+
+.statCardHeader {
+  margin-bottom: 1rem;
+}
+
+.statIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+}
+
+.statIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.statCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #FFD700;
+}
+
+.statLabel {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+.statSubtext {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.25rem;
+}
+
+.quickActionsSection {
+  margin-top: 1rem;
+  padding: 0 1.25rem;
+}
+
+.sectionHeader {
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 0.25rem;
+}
+
+.sectionSubtitle {
+  color: #a5b4fc;
+  font-size: 0.875rem;
+}
+
+.actionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.actionCard {
+  text-decoration: none;
+  display: block;
+}
+
+.actionCardInner {
+  background: linear-gradient(145deg, rgba(9, 14, 28, 0.84), rgba(13, 20, 38, 0.8));
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.actionCardInner::before {
+  content: none;
+}
+
+.actionCardInner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(34, 211, 238, 0.12);
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.actionIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  flex-shrink: 0;
+}
+
+.actionIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.actionContent {
+  flex: 1;
+}
+
+.actionTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin-bottom: 0.25rem;
+}
+
+.actionDescription {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+}
+
+.actionArrow {
+  color: #67e8f9;
+  flex-shrink: 0;
+}
+
+.actionArrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .welcomeSection {
+    flex-direction: column;
+  }
+
+  .clockWidget {
+    width: 100%;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .actionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .quickActionsSection {
+    padding: 0;
+  }
+}

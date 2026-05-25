@@ -1,0 +1,289 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(26, 31, 58, 0.6);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid var(--btn);
+  transition: all 0.3s ease;
+}
+
+.navScrolled {
+  background: rgba(26, 31, 58, 0.95);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.navContainer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 32px;
+}
+
+.mobileNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  position: relative;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.mobileLogoContainer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logoImage {
+  height: 50px;
+  width: auto;
+}
+
+.mobileLogoImage {
+  height: 48px;
+  width: auto;
+}
+
+.sideMenuLogoImage {
+  height: 50px;
+  width: auto;
+  margin-top: 8px;
+}
+
+.menuItems {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.navLink {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  color: var(--btn);
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.navLink.active {
+  color: var(--btn);
+  font-weight: 700;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburgerLine {
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  transition: all 0.3s ease;
+}
+
+.hamburgerActive .hamburgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburgerActive .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerActive .hamburgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.sideMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.sideMenuOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sideMenuContent {
+  width: 320px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 31, 58, 0.98) 0%,
+    rgba(15, 20, 40, 0.98) 100%
+  );
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 32px 24px;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    4px 0 24px rgba(0, 0, 0, 0.5),
+    inset -1px 0 0 rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 215, 0, 0.2);
+  position: relative;
+  overflow-y: auto;
+}
+
+.sideMenuContent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.5),
+    transparent
+  );
+}
+
+.sideMenuOpen .sideMenuContent {
+  transform: translateX(0);
+}
+
+.sideMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.sideMenuHeader::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.8), transparent);
+}
+
+.closeBtn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 215, 0, 0.1);
+  border-color: rgba(255, 215, 0, 0.3);
+  color: var(--btn);
+  transform: rotate(90deg);
+}
+
+.sideMenuNav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sideMenuLink {
+  color: var(--text);
+  padding: 14px 16px;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid transparent;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.sideMenuLink::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: linear-gradient(180deg, rgba(255, 215, 0, 0.8), rgba(255, 215, 0, 0.4));
+  border-radius: 0 2px 2px 0;
+  transition: height 0.3s ease;
+}
+
+.sideMenuLink:hover {
+  color: var(--btn);
+  background: rgba(255, 215, 0, 0.08);
+  border-color: rgba(255, 215, 0, 0.2);
+  transform: translateX(4px);
+  padding-left: 20px;
+}
+
+.sideMenuLink:hover::before {
+  height: 60%;
+}
+
+.sideMenuLink.sideMenuActive {
+  color: var(--btn);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 215, 0, 0.15),
+    rgba(255, 215, 0, 0.05)
+  );
+  border-color: rgba(255, 215, 0, 0.3);
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.sideMenuLink.sideMenuActive::before {
+  height: 70%;
+}
+
+@media (min-width: 769px) {
+  .desktopNav {
+    display: flex;
+  }
+  .mobileNav {
+    display: none;
+  }
+}

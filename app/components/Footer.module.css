@@ -1,0 +1,277 @@
+.footer {
+  background: rgba(26, 31, 58, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 2px solid var(--line);
+  padding: 48px 0 24px;
+  margin-top: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footerContainer {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logoSection {
+  margin-bottom: 16px;
+}
+
+.logoLink {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.logoLink:hover {
+  opacity: 0.8;
+}
+
+.logoImage {
+  height: 100px;
+  width: auto;
+}
+
+.description {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.socialSection,
+.menuSection,
+.contactSection,
+.communitySection,
+.responsibleGaming {
+  margin-top: 16px;
+}
+
+.socialTitle,
+.menuTitle,
+.contactTitle,
+.communityTitle,
+.responsibleTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIcon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background: var(--btn);
+  color: var(--btnText);
+}
+
+.socialIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.menuList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menuLink {
+  color: var(--muted);
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.menuLink:hover {
+  color: var(--btn);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactItem {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contactLink {
+  color: var(--muted);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  color: var(--btn);
+}
+
+.contactText {
+  color: var(--muted);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contactItem i {
+  color: var(--btn);
+  width: 16px;
+  text-align: center;
+}
+
+.communityList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.communityLink {
+  color: var(--muted);
+  font-size: 14px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.communityLink:hover {
+  color: var(--btn);
+}
+
+.communityLink i {
+  color: var(--btn);
+  width: 16px;
+  text-align: center;
+}
+
+.responsibleGaming {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(245, 158, 11, 0.05) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.responsibleGaming::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.6), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.responsibleTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.responsibleTitle::before {
+  content: "⚠️";
+  font-size: 18px;
+}
+
+.responsibleText {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.responsibleText a {
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.responsibleText a:hover {
+  color: #FFED4E;
+  text-decoration: underline;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.copyright p {
+  margin: 8px 0;
+}
+
+.partnershipNote {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footerColumn {
+    gap: 20px;
+  }
+}

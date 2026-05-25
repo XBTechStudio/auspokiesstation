@@ -1,0 +1,497 @@
+/*
+  2025-2026 Quantum Consciousness Design System - Partner Casinos
+  - Advanced Quantum Computing Aesthetics
+  - Neural Network Morphology with AI Enhancement
+  - Holographic Projection Effects
+  - AI-Powered Predictive Interactions
+  - Metaverse-Ready Architecture
+*/
+
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, rgba(0, 255, 204, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0a0a 0%, #000000 50%, #050505 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-attachment: fixed;
+  animation: pageLoad 1.5s ease-out;
+}
+
+@keyframes pageLoad {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+/* Enhanced Ambient Lighting */
+.page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0, 255, 204, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 60% 10%, rgba(168, 85, 247, 0.03) 0%, transparent 50%);
+  animation: ambientShift 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ambientShift {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1) rotate(0deg);
+  }
+  33% {
+    opacity: 0.8;
+    transform: scale(1.05) rotate(1deg);
+  }
+  66% {
+    opacity: 0.4;
+    transform: scale(0.95) rotate(-1deg);
+  }
+}
+
+/* Quantum Particle Canvas */
+.quantumCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Organic Flow Background */
+.organicFlow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0.25;
+}
+
+.organicShape {
+  position: absolute;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background: linear-gradient(45deg,
+    rgba(0, 255, 204, 0.1) 0%,
+    rgba(99, 102, 241, 0.08) 50%,
+    rgba(168, 85, 247, 0.06) 100%
+  );
+  animation: organicMorph 20s infinite ease-in-out, organicFloat 15s infinite ease-in-out;
+  filter: blur(25px); /* Reduced for performance */
+}
+
+.organicShape:nth-child(1) {
+  width: 400px;
+  height: 300px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.organicShape:nth-child(2) {
+  width: 500px;
+  height: 400px;
+  top: 50%;
+  right: 5%;
+  animation-delay: -5s;
+  border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+}
+
+.organicShape:nth-child(3) {
+  width: 350px;
+  height: 250px;
+  bottom: 15%;
+  left: 20%;
+  animation-delay: -10s;
+  border-radius: 70% 30% 40% 60% / 70% 40% 60% 30%;
+}
+
+@keyframes organicMorph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    border-radius: 30% 70% 60% 40% / 30% 60% 40% 70%;
+    transform: scale(1.1) rotate(90deg);
+  }
+  50% {
+    border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+    transform: scale(0.9) rotate(180deg);
+  }
+  75% {
+    border-radius: 70% 30% 40% 60% / 70% 40% 60% 30%;
+    transform: scale(1.05) rotate(270deg);
+  }
+}
+
+@keyframes organicFloat {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.6;
+  }
+  66% {
+    transform: translateY(15px) translateX(-15px);
+    opacity: 0.4;
+  }
+}
+
+.wrap {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Quantum Hero Section */
+.heroSection {
+  padding: 120px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: auto;
+}
+
+.heroContainer {
+  text-align: center;
+  max-width: 1200px;
+  position: relative;
+}
+
+.heroTitle {
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  margin-bottom: 2rem;
+  position: relative;
+  background: linear-gradient(135deg,
+    #ffffff 0%,
+    #00ffcc 25%,
+    #6366f1 50%,
+    #a855f7 75%,
+    #00ffcc 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.5))
+          drop-shadow(0 0 15px rgba(99, 102, 241, 0.3))
+          drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25)); /* Reduced from 4 drop-shadows to 3 */
+  animation: titleGradientShift 6s ease-in-out infinite, titleFloat 6s ease-in-out infinite;
+  -webkit-text-stroke: 1px rgba(0, 255, 204, 0.3);
+}
+
+.heroTitle span {
+  position: relative;
+  display: inline-block;
+  transform: perspective(1000px) rotateX(0deg);
+  transition: transform 0.3s ease;
+}
+
+.heroTitle:hover span {
+  transform: perspective(1000px) rotateX(5deg) rotateY(2deg);
+}
+
+.titleGlow {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(0, 255, 204, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 50%);
+  border-radius: 30px;
+  animation: titleGlowPulse 4s infinite ease-in-out, titleGlowRotate 20s infinite linear;
+  pointer-events: none;
+  filter: blur(1px);
+}
+
+@keyframes titleGlowPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05) rotate(1deg);
+  }
+}
+
+@keyframes titleGlowRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes titleGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.heroSubtitle {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  position: relative;
+}
+
+/* Enhanced Holographic Card */
+.holographicCard {
+  position: relative;
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.025) 0%,
+      rgba(255, 255, 255, 0.015) 25%,
+      rgba(255, 255, 255, 0.005) 50%,
+      rgba(255, 255, 255, 0.015) 75%,
+      rgba(255, 255, 255, 0.025) 100%
+    ),
+    linear-gradient(45deg,
+      rgba(0, 255, 204, 0.015) 0%,
+      rgba(99, 102, 241, 0.008) 25%,
+      rgba(168, 85, 247, 0.012) 50%,
+      rgba(99, 102, 241, 0.008) 75%,
+      rgba(0, 255, 204, 0.015) 100%
+    ),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  backdrop-filter: blur(15px) saturate(150%) contrast(1.05); /* Reduced for performance */
+  -webkit-backdrop-filter: blur(15px) saturate(150%) contrast(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.holographicCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(0, 255, 204, 0.4);
+  box-shadow:
+    0 25px 50px rgba(0, 255, 204, 0.15),
+    0 15px 35px rgba(99, 102, 241, 0.1),
+    0 5px 15px rgba(168, 85, 247, 0.1);
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.125rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: sectionReveal 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes sectionReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #00ffcc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.brandsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3rem;
+  padding: 10px 0;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .brandsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+.brandsGrid > * {
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.brandCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 3rem;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px); /* Reduced for performance */
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.brandCard:hover {
+  transform: translateY(-15px) rotateX(5deg);
+  border-color: rgba(0, 255, 204, 0.3);
+  box-shadow: 0 30px 80px rgba(0, 255, 204, 0.1);
+}
+
+.cardTag {
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00ffcc 0%, #6366f1 100%);
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(0, 255, 204, 0.3);
+  z-index: 10;
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.cardHeader img {
+  max-height: 60px;
+  width: auto;
+}
+
+.cardContent {
+  margin-bottom: 20px;
+}
+
+.cardPromo {
+  text-align: center;
+  color: #00ffcc;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #00ffcc 0%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cardHeadline {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 8px;
+}
+
+.cardDetails {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.registerBtn,
+.telegramBtn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.registerBtn {
+  background: linear-gradient(135deg, #00ffcc 0%, #6366f1 100%);
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.registerBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
+}
+
+.telegramBtn {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.telegramBtn:hover {
+  border-color: rgba(0, 255, 204, 0.5);
+  color: #00ffcc;
+  background: rgba(0, 255, 204, 0.1);
+  transform: translateY(-2px);
+}
+
+.emptyState {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .brandsGrid {
+    grid-template-columns: 1fr;
+  }
+}

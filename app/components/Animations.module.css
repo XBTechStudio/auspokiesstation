@@ -1,0 +1,44 @@
+.meteorContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.meteorContainer::before,
+.meteorContainer::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: meteor 3s linear infinite;
+}
+
+.meteorContainer::before {
+  top: 0;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.meteorContainer::after {
+  top: 0;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+
+@keyframes meteor {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(100px);
+    opacity: 0;
+  }
+}

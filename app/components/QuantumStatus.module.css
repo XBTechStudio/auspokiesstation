@@ -1,0 +1,51 @@
+.quantumStatus {
+  margin-bottom: 2rem;
+}
+
+.statusIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: rgba(0, 255, 204, 0.1);
+  border: 1px solid rgba(0, 255, 204, 0.3);
+  border-radius: 50px;
+  backdrop-filter: blur(20px);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #00ffcc;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.statusIndicator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.2), transparent);
+  animation: statusScan 2s infinite;
+}
+
+.quantumBit {
+  width: 8px;
+  height: 8px;
+  background: #00ffcc;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+  animation: quantumPulse 1s infinite;
+}
+
+@keyframes quantumPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
+
+@keyframes statusScan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
